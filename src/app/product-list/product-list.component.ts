@@ -13,9 +13,10 @@ export class ProductListComponent implements OnInit {
       category: 'Limpieza del Hogar',
       name: 'Cera',
       price: 120,
-      stock: 56,
+      stock: 5,
       image: 'assets/img/hogar.jpg',
       sale: false,
+      quantity: 0,
     },
     {
       category: 'Limpieza del Hogar',
@@ -24,6 +25,7 @@ export class ProductListComponent implements OnInit {
       stock: 110,
       image: 'assets/img/hogar.jpg',
       sale: false,
+      quantity: 0,
     },
     {
       category: 'Limpieza del Hogar',
@@ -32,6 +34,7 @@ export class ProductListComponent implements OnInit {
       stock: 36,
       image: 'assets/img/hogar.jpg',
       sale: false,
+      quantity: 0,
     },
     {
       category: 'Limpieza del Hogar',
@@ -40,6 +43,7 @@ export class ProductListComponent implements OnInit {
       stock: 33,
       image: 'assets/img/jardin.jpg',
       sale: true,
+      quantity: 0,
     },
     {
       category: 'Jardines y Mascotas',
@@ -48,6 +52,7 @@ export class ProductListComponent implements OnInit {
       stock: 44,
       image: 'assets/img/jardin.jpg',
       sale: false,
+      quantity: 0,
     },
     {
       category: 'Cosmetica Automotriz',
@@ -56,6 +61,7 @@ export class ProductListComponent implements OnInit {
       stock: 38,
       image: 'assets/img/autos.jpg',
       sale: false,
+      quantity: 0,
     },
     {
       category: 'Cosmetica Automotriz',
@@ -64,12 +70,27 @@ export class ProductListComponent implements OnInit {
       stock: 0,
       image: 'assets/img/autos.jpg',
       sale: false,
+      quantity: 0,
     }
   ]
  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  upQuantity(product: Product): void{
+    if (product.quantity < product.stock)
+    product.quantity++;
+  }
+
+  downQuantity(product: Product): void{
+    if (product.quantity > 0)
+    product.quantity--;
+  }
+
+  onChangeQuantity(event, product: Product): void{
+    console.log(event.key);
   }
 
 }
