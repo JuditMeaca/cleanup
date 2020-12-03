@@ -11,7 +11,7 @@ import { map, tap } from 'rxjs/operators';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[] = [/*
+  products: Product[] = [/*mock, listado de productos de limpieza
     {
       category: 'Limpieza del Hogar',
       name: 'Cera',
