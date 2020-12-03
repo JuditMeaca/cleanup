@@ -1,13 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><img src="/src/assets/img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> {{title}}</a>
+  <a class="navbar-brand" href="about">{{title}}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item active">
         <a class="nav-link" [routerLink]="['/products']">Productos</a>
       </li>
@@ -23,7 +20,7 @@
 
 <footer class="page-footer font-small unique-color-dark pt-4">
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="home"> {{title}}</a>
+      <a href="about"> {{title}}</a>
   </div>
 </footer>
 

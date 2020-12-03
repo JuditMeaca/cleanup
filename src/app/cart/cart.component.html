@@ -1,1 +1,6 @@
-<p>cart works!</p>
+<h5>Carrito de Compras</h5>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let product of (cartList$ | async)">
+        {{product.name}}: {{product.quantity}} <span class="badge badge-light">${{product.price*product.quantity}}</span>
+    </li>
+</ul>
